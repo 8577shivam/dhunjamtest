@@ -46,6 +46,7 @@ const Auth = () => {
       // Note: Ensure that the 'Link' component is used appropriately in your routing setup
     } catch (error) {
       console.error("Error:", error.message);
+      alert("An unexpected error occurred. Please try again.");
     }
   };
 
