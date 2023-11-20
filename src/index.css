@@ -1,13 +1,249 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+p,
+h1,
+h2,
+h3,
+h3,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --heading-font-size: 32px;
+  --normal-font-size: 16px;
+  --font-family: "Poppins", sans-serif;
+  --background-color: #030303;
+  --font-color: #ffffff;
+  --radio-background: #ffffff;
+  --selected-radio-color: #6741d9;
+  --input-border-color: #ffffff;
+  --graph-bars-color: #f0c3f1;
+  --bar-axis-color: #ffffff;
+  --save-button-background: #6741d9;
+  --save-button-hover-border: #f0c3f1;
+  --field-container-width: 600px;
+  --max-width: 300px;
+  --greyed-out-background: #c2c2c2;
+}
+
+/* Apply the styles using the variables */
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: var(--heading-font-size);
+  text-align: center;
+}
+
+/* All other text */
+body {
+  font-size: var(--normal-font-size);
+  font-family: var(--font-family);
+  color: var(--font-color);
+}
+
+/* Background color */
+body {
+  background-color: var(--background-color);
+}
+
+/* Radio buttons */
+input[type="radio"] {
+  background-color: var(--radio-background);
+}
+
+input[type="radio"]:checked {
+  background-color: var(--selected-radio-color);
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="text"],
+input[type="password"] {
+  border: 1px solid var(--input-border-color);
+  color: var(--font-color);
+}
+
+.graph-bars {
+  background-color: var(--graph-bars-color);
+}
+
+.bar-axis {
+  color: var(--bar-axis-color);
+}
+
+.save-button {
+  background-color: var(--save-button-background);
+  width: var(--field-container-width);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.save-button:hover,
+.save-button:active {
+  border: 1px solid var(--save-button-hover-border);
+}
+
+.field-container {
+  width: var(--field-container-width);
+  max-width: var(--max-width);
+  min-width: fit-content;
+  padding: 8px 8px;
+  border: 1px solid var(--font-color);
+  border-radius: 12px;
+}
+
+.greyed-out-radio {
+  background-color: var(--greyed-out-background);
+}
+
+.greyed-out-input {
+  border: 1px solid var(--greyed-out-background);
+  color: var(--greyed-out-background);
+}
+
+.Signin-layout {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  gap: 24px;
+}
+.form-container {
+  max-width: 600px;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+#username,
+#pwd {
+  border: none;
+  outline: none;
+  background: transparent;
+}
+#username {
+  width: 100%;
+}
+#pwd {
+  width: 93%;
+}
+#submit:disabled {
+  background: #c2c2c2;
+  color: grey;
+}
+#submit {
+  padding: 8px 6px;
+  background-color: var(--save-button-background);
+  border-radius: 12px;
+  cursor: pointer;
+}
+.signin-text {
+  display: grid;
+  justify-self: center;
+  cursor: pointer;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+
+/* screen2 */
+.Dashboard-section {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 32px;
+}
+.dashboard-form {
+  max-width: 600px;
+  display: grid;
+  gap: 32px;
+}
+.box {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.radio_box {
+  display: grid;
+  grid-auto-flow: column;
+  justify-self: center;
+  gap: 16px;
+}
+#custom-song-amount {
+  display: grid;
+  justify-self: center;
+}
+#category7-amount {
+  width: 30px;
+}
+
+#category8-amount {
+  width: 30px;
+}
+
+#category9-amount {
+  width: 30px;
+}
+
+#category10-amount {
+  width: 30px;
+}
+.save-button {
+  padding: 12px 0px;
+  border-radius: 12px;
+  font-weight: 800;
+  color: var(--font-color);
+  cursor: pointer;
+}
+.dashboard-inputbox {
+  display: grid;
+  grid-auto-flow: column;
+  justify-self: center;
+  gap: 8px;
+  align-items: center;
+}
+/* dasboard input */
+.Dashboard-section input {
+  padding: 8px 6px;
+  border-radius: 8px;
+  border: 1px solid white;
+  color: var(--font-color);
+  background: transparent;
+  text-align: center;
+  font-weight: 800;
+  cursor: pointer;
+}
+input[type="number"]:disabled {
+  background-color: #575258;
+}
+button:disabled {
+  color: var(--greyed-out-background);
+  background: #27155c;
 }
